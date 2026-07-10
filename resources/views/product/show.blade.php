@@ -46,7 +46,7 @@
                                     </tr>
                                     <tr>
                                         <td>Наименование</td>
-                                        <td>{{ $roduct->title }}</td>
+                                        <td>{{ $product->title }}</td>
                                     </tr>
                                 </tbody>
                             </table>
