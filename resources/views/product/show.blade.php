@@ -48,6 +48,48 @@
                                         <td>Наименование</td>
                                         <td>{{ $product->title }}</td>
                                     </tr>
+                                    <tr>
+                                        <td>Описание</td>
+                                        <td>{{ $product->description }}</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Контент</td>
+                                        <td>{{ $product->content }}</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Цена</td>
+                                        <td>{{ $product->price }}</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Количество на складе</td>
+                                        <td>{{ $product->count }}</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Картинка превью</td>
+                                        <td><img src="{{ Storage::url($product->preview_image) }}" alt="preview_image" class="img-uploaded" style="max-height: 50px;">
+                                    </tr>
+                                    <tr>
+                                        <td>Категория</td>
+                                        <td>
+                                            {{ $product->category->title }}
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Цвета</td>
+                                        <td>
+                                            @foreach($product->colors as $color)
+                                                <div>{{ $color->title }}</div>
+                                            @endforeach
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Теги</td>
+                                        <td>
+                                            @foreach($product->tags as $tag)
+                                                <div>{{ $tag->title }}</div>
+                                            @endforeach
+                                        </td>
+                                    </tr>
                                 </tbody>
                             </table>
                         </div>

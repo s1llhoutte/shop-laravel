@@ -23,7 +23,18 @@ class UpdateRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'title' => ['required', 'regex:/^([A-Fa-f0-9]{6}|[A-Fa-f0-9]{3})$/']
+            'title' => 'required|string',
+            'description' => 'required|string',
+            'content' => 'required|string',
+            'preview_image' => 'nullable|image',
+            'price' => 'required|integer|min:0',
+            'count' => 'required|integer|min:0',
+            'is_published' => 'nullable|boolean',
+            'category_id' => 'required|integer|exists:categories,id',
+            'tags' => 'nullable|array',
+            'tags.*' => 'integer|exists:tags,id',
+            'colors' => 'nullable|array',
+            'colors.*' => 'integer|exists:colors,id',
         ];
     }
 }

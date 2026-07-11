@@ -32,16 +32,26 @@
                         <div class="card-body table-responsive p-0">
                             <table class="table table-hover text-nowrap">
                                 <thead>
-                                <tr>
+                                <tr class="text-center">
                                     <th>ID</th>
                                     <th>Наименование</th>
+                                    <th>Описание</th>
+                                    <th>Контент</th>
+                                    <th>Цена</th>
+                                    <th>Количество на складе</th>
+                                    <th>Картинка превью</th>
                                 </tr>
                                 </thead>
                                 <tbody>
                                 @foreach($products as $product)
-                                <tr>
+                                <tr class="text-center">
                                     <td>{{ $product->id }}</td>
                                     <td><a href="{{ route('product.show', $product->id) }}">{{ $product->title }}</a></td>
+                                    <td>{{ $product->description }}</td>
+                                    <td>{{ $product->content }}</td>
+                                    <td>{{ $product->price }}</td>
+                                    <td>{{ $product->count }}</td>
+                                    <td><img src="{{ Storage::url($product->preview_image) }}" alt="preview_image" class="img-uploaded" style="max-height: 50px;">
                                 </tr>
                                 @endforeach
                                 </tbody>
