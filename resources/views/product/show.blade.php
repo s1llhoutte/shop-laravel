@@ -94,6 +94,10 @@
                                             @endforeach
                                         </td>
                                     </tr>
+                                    <tr>
+                                        <td>Группа</td>
+                                        <td>{{ $product->group?->title }}</td>
+                                    </tr>
                                 </tbody>
                             </table>
                         </div>

@@ -77,6 +77,17 @@
                             @endforeach
                         </select>
                     </div>
+                    <div class="form-group">
+                        <select name="group_id" class="form-control">
+                            <option value="">Выберите группу</option>
+
+                            @foreach($groups as $group)
+                                <option value="{{ $group->id }}">
+                                    {{ $group->title }}
+                                </option>
+                            @endforeach
+                        </select>
+                    </div>
 
                     <div class="form-group">
                         <input type="submit" class="btn btn-primary" value="Добавить">
