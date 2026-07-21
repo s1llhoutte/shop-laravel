@@ -57,8 +57,12 @@
                                         <td>{{ $product->content }}</td>
                                     </tr>
                                     <tr>
-                                        <td>Цена</td>
+                                        <td>Цена со скидкой</td>
                                         <td>{{ $product->price }}</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Цена</td>
+                                        <td>{{ $product->old_price }}</td>
                                     </tr>
                                     <tr>
                                         <td>Количество на складе</td>

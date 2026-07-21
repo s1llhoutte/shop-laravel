@@ -40,7 +40,11 @@
                     </div>
 
                     <div class="form-group">
-                        <input type="text" name="price" value="{{ old('price', $product->price) }}" class="form-control" placeholder="Цена">
+                        <input type="text" name="price" value="{{ old('price', $product->price) }}" class="form-control" placeholder="Цена со скидкой">
+                    </div>
+
+                    <div class="form-group">
+                        <input type="text" name="old_price" value="{{ old('old_price', $product->old_price) }}" class="form-control" placeholder="Цена">
                     </div>
 
                     <div class="form-group">

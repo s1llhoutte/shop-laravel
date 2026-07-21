@@ -37,6 +37,7 @@
                                     <th>Наименование</th>
                                     <th>Описание</th>
                                     <th>Контент</th>
+                                    <th>Цена со скидкой</th>
                                     <th>Цена</th>
                                     <th>Количество на складе</th>
                                     <th>Картинка превью</th>
@@ -50,6 +51,7 @@
                                     <td>{{ $product->description }}</td>
                                     <td>{{ $product->content }}</td>
                                     <td>{{ $product->price }}</td>
+                                    <td>{{ $product->old_price }}</td>
                                     <td>{{ $product->count }}</td>
                                     <td><img src="{{ Storage::url($product->preview_image) }}" alt="preview_image" class="img-uploaded" style="max-height: 50px;">
                                 </tr>
