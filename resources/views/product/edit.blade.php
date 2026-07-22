@@ -68,6 +68,40 @@
                     </div>
 
                     <div class="form-group">
+                        <label>Дополнительные изображения</label>
+
+                        <div class="input-group mb-2">
+                            <div class="custom-file">
+                                <input name="product_images[]" type="file" class="custom-file-input" id="productImage1">
+                                <label class="custom-file-label" for="productImage1">Выберите файл</label>
+                            </div>
+                            <div class="input-group-append">
+                                <span class="input-group-text">Загрузить</span>
+                            </div>
+                        </div>
+
+                        <div class="input-group mb-2">
+                            <div class="custom-file">
+                                <input name="product_images[]" type="file" class="custom-file-input" id="productImage2">
+                                <label class="custom-file-label" for="productImage2">Выберите файл</label>
+                            </div>
+                            <div class="input-group-append">
+                                <span class="input-group-text">Загрузить</span>
+                            </div>
+                        </div>
+
+                        <div class="input-group">
+                            <div class="custom-file">
+                                <input name="product_images[]" type="file" class="custom-file-input" id="productImage3">
+                                <label class="custom-file-label" for="productImage3">Выберите файл</label>
+                            </div>
+                            <div class="input-group-append">
+                                <span class="input-group-text">Загрузить</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
                         <select name="category_id" class="form-control select2">
                             @foreach($categories as $category)
                                 <option

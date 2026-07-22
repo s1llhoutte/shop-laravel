@@ -15,6 +15,14 @@ class DeleteController extends Controller
             Storage::disk('public')->delete($product->preview_image);
         }
 
+        foreach ($product->productImages as $productImage) {
+            if (Storage::disk('public')->exists($productImage->file_path)) {
+                Storage::disk('public')->delete($productImage->file_path);
+            }
+
+            $productImage->delete();
+        }
+
         $product->tags()->detach();
         $product->colors()->detach();
 

@@ -37,6 +37,7 @@ class UpdateRequest extends FormRequest
             'colors' => 'nullable|array',
             'colors.*' => 'integer|exists:colors,id',
             'group_id' => 'nullable|integer|exists:groups,id',
+            'product_images' => 'nullable|array',
         ];
     }
 }

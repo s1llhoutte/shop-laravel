@@ -73,6 +73,14 @@
                                         <td><img src="{{ Storage::url($product->preview_image) }}" alt="preview_image" class="img-uploaded" style="max-height: 50px;">
                                     </tr>
                                     <tr>
+                                        <td>Дополнительные картинки</td>
+                                        <td>
+                                        @foreach($product->productImages as $productImage)
+                                            <img src="{{ Storage::url($productImage->file_path) }}" alt="product_image{{ $productImage->id }}" class="img-uploaded" style="max-height:50px">
+                                        @endforeach
+                                        </td>
+                                    </tr>
+                                    <tr>
                                         <td>Категория</td>
                                         <td>
                                             {{ $product->category->title }}
